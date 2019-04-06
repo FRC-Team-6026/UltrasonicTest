@@ -23,6 +23,7 @@ public class Robot extends TimedRobot {
   private static final String kCustomAuto = "My Auto";
   private String m_autoSelected;
   private final SendableChooser<String> m_chooser = new SendableChooser<>();
+  private final UltrasonicSensor _ultrasonicSensor = new UltrasonicSensor();
 
   /**
    * This function is run when the robot is first started up and should be
@@ -45,6 +46,8 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotPeriodic() {
+    var distanceCm = _ultrasonicSensor.getDistanceCm();
+    SmartDashboard.putNumber("Distance cm", distanceCm);
   }
 
   /**
