@@ -46,8 +46,8 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotPeriodic() {
-    var distanceCm = _ultrasonicSensor.getDistanceCm();
-    SmartDashboard.putNumber("Distance cm", distanceCm);
+    var distanceMm = _ultrasonicSensor.getDistanceMm();
+    SmartDashboard.putNumber("Distance mm", distanceMm);
   }
 
   /**
